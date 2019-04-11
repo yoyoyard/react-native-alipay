@@ -1,15 +1,15 @@
 # Android Setup
 
-1. Open up `android/app/src/main/java/[...]/MainApplication.java`, add `new AlipayPackage()` to the list returned by the `getPackages()` method like this: 
+1. Open up `android/app/src/main/java/[...]/MainApplication.java`, add `new AlipayPackage()` to the list returned by the `getPackages()` method like this:
 ```java
 // ...
 
-import com.reactlibrary.AlipayPackage;
+import com.alipay.AlipayPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
-    
+
     // ...
 
     @Override
