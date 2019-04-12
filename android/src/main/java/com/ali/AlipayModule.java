@@ -1,5 +1,5 @@
 
-package com.alipay;
+package com.ali;
 
 import com.alipay.sdk.app.H5PayCallback;
 import com.alipay.sdk.util.H5PayResultModel;

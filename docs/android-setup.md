@@ -4,7 +4,7 @@
 ```java
 // ...
 
-import com.alipay.AlipayPackage;
+import com.ali.AlipayPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
