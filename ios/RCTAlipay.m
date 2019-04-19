@@ -42,7 +42,7 @@ static NSString *const kOpenURLNotification = @"RCTOpenURLNotification";
                 weakSelf.payOrderResolve = nil;
             }
         }];
-        
+
         [AlipaySDK.defaultService processAuth_V2Result:url standbyCallback:^(NSDictionary *resultDic) {
             NSLog(@"processAuth_V2Result = %@", resultDic);
         }];
@@ -94,6 +94,11 @@ RCT_EXPORT_METHOD(getVersion:(RCTPromiseResolveBlock)resolve) {
         }
     }
     return nil;
+}
+
++ (BOOL)requiresMainQueueSetup
+{
+    return YES;
 }
 
 @end
