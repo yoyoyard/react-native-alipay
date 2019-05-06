@@ -5,7 +5,7 @@ import com.alipay.sdk.app.H5PayCallback;
 import com.alipay.sdk.util.H5PayResultModel;
 import com.alipay.sdk.app.AuthTask;
 import com.alipay.sdk.app.PayTask;
-import com.alipay.sdk.app.EnvUtils
+import com.alipay.sdk.app.EnvUtils;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
