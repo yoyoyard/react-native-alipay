@@ -5,6 +5,7 @@ import com.alipay.sdk.app.H5PayCallback;
 import com.alipay.sdk.util.H5PayResultModel;
 import com.alipay.sdk.app.AuthTask;
 import com.alipay.sdk.app.PayTask;
+import com.alipay.sdk.app.EnvUtils
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -40,6 +41,15 @@ public class AlipayModule extends ReactContextBaseJavaModule {
     };
     Thread thread = new Thread(runnable);
     thread.start();
+  }
+
+  @ReactMethod
+  public void setSandBox(boolean isSandBox) {
+    if (isSandBox) {
+      EnvUtils.setEnv(EnvUtils.EnvEnum.SANDBOX);
+    } else {
+      EnvUtils.setEnv(EnvUtils.EnvEnum.ONLINE);
+    }
   }
 
   @ReactMethod

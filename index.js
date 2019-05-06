@@ -1,8 +1,13 @@
-import { NativeModules } from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 import { Buffer } from 'buffer';
 import RSASign from 'jsrsasign';
 
 const { Alipay } = NativeModules;
+
+Alipay.setSandbox = Platform.select({
+  ios: () => {},
+  android: (isSandBox) => Alipay.setSandbox(!!isSandBox)
+});
 
 Alipay.sign = (object, privateKey) => {
 
