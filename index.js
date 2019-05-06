@@ -4,11 +4,6 @@ import RSASign from 'jsrsasign';
 
 const { Alipay } = NativeModules;
 
-Alipay.setSandbox = Platform.select({
-  ios: () => {},
-  android: (isSandBox) => Alipay.setSandbox(!!isSandBox)
-});
-
 Alipay.sign = (object, privateKey) => {
 
   // Add default sign_type

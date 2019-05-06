@@ -63,6 +63,10 @@ RCT_EXPORT_METHOD(authWithInfo:(NSString *)infoStr
     }];
 }
 
+RCT_EXPORT_METHOD(setSandBox:(boolean)isSandBox) {
+
+}
+
 RCT_EXPORT_METHOD(pay:(NSString *)orderInfo
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject) {
