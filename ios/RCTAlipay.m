@@ -104,9 +104,4 @@ RCT_EXPORT_METHOD(getVersion:(RCTPromiseResolveBlock)resolve) {
     return nil;
 }
 
-+ (BOOL)requiresMainQueueSetup
-{
-    return YES;
-}
-
 @end
